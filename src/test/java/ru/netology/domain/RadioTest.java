@@ -9,6 +9,8 @@ class RadioTest {
     @Test
     void shouldSetCurrentRadioStation () {
         Radio radio = new Radio(10, 10,40,100);
+        int currentRadioStation = 10;
+        radio.setCurrentRadioStation(currentRadioStation);
         int expected = 10;
         assertEquals(expected, radio.getCurrentRadioStation());
     }
