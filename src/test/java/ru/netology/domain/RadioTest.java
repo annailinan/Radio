@@ -5,7 +5,7 @@ import org.junit.jupiter.api.Test;
 
 public class RadioTest {
     @Test
-    public void testVolumeUp() {
+    public void VolumeUp1() {
         Radio radio = new Radio();
         radio.setCurrentVolume(50);
         radio.increaseVolume();
@@ -23,7 +23,7 @@ public class RadioTest {
     }
 
     @Test
-    public void volumeDown() {
+    public void volumeShort() {
         Radio radio = new Radio();
         radio.setCurrentVolume(0);
         radio.reduceVolume();
@@ -32,7 +32,7 @@ public class RadioTest {
     }
 
     @Test
-    public void volumeDown2() {
+    public void volumeShort2() {
         Radio radio = new Radio();
         radio.setCurrentVolume(48);
         radio.reduceVolume();
@@ -48,7 +48,7 @@ public class RadioTest {
     }
 
     @Test
-    public void nextStation1() {
+    public void nextStationTwo() {
         Radio radio = new Radio();
         radio.setStation(8);
         radio.nextStation();
@@ -64,7 +64,7 @@ public class RadioTest {
     }
 
     @Test
-    public void previousStation1() {
+    public void previousStationTwo() {
         Radio radio = new Radio();
         radio.setStation(7);
         radio.previousStation();
@@ -87,23 +87,23 @@ public class RadioTest {
 
 
     @Test
-    public void testSetStationNegative() {
+    public void SetStationNegative() {
         Radio radio = new Radio(7);
-        radio.setStation(-15);
+        radio.setStation(-16);
         Assertions.assertEquals(0, radio.getStation());
     }
 
     @Test
-    public void testSetVolumeOutOfRange() {
+    public void SetVolumeOutOfRange() {
         Radio radio = new Radio();
-        radio.setCurrentVolume(120);
+        radio.setCurrentVolume(330);
         Assertions.assertEquals(0, radio.getCurrentVolume());
     }
 
     @Test
-    public void testSetVolumeNegative() {
+    public void SetVolumeNegative() {
         Radio radio = new Radio();
-        radio.setCurrentVolume(-16);
+        radio.setCurrentVolume(-27);
         Assertions.assertEquals(0, radio.getCurrentVolume());
     }
 
